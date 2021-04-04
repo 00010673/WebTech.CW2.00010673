@@ -9,3 +9,7 @@ block main
       label(for="text") Description:
       textarea#text(name="text")
       button.btn Create
+    if success
+      div.notification.success Success! 
+    if error
+      div.notification.error Error! 

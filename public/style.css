@@ -196,6 +196,21 @@ h2.closed {
   background-color: red;
 }
 
+.notification {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+}
+
+.notification.success {
+  color: rgb(0, 255, 0);
+}
+
+.notification.error {
+  color: red;
+}
+
 @media only screen and (max-width: 1000px) {
   .link {
     font-size: 1rem;
