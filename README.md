@@ -35,3 +35,16 @@ https://github.com/00010673/WebTech.CW2.00010673/settings
 ## Glitch Web Page Link:
 
 https://report-bug.glitch.me/
+
+
+## Project Structure Definition:
+
+Project has been built by following the recommended project structure in WebTech CW2. It has the folders below with description:
+- data - with database (json) files
+- public - with styling files (CSS)
+- routes - with route pages
+- views - with all page markup files (pug) 
+- .gitignore
+- app.js - main entry point
+- npm files
+- documentation file
