@@ -2,8 +2,9 @@ extends layout.pug
 
 block main
   section
-    h2(class=`closed`) Ticket Title
-    .ticket-text(class=`closed`) Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ratione velit repudiandae, veniam soluta enim alias numquam optio qui, repellat unde illum adipisci, nesciunt atque fugiat nostrum quasi quam? Sequi!
+    h2(class=`${ticket.status}`)=ticket.name
+    .ticket-text(class=`${ticket.status}`)=ticket.text
     .buttons
-      a.btn(href="/tickets/id/resolve") Mark Resolved
-      a.btn.delete(href="/tickets/id/delete") Delete
+      if ticket.status == "open"
+        a.btn(href=`/tickets/${ticket.id}/resolve`) Mark Resolved
+      a.btn.delete(href=`/tickets/${ticket.id}/delete`) Delete

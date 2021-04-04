@@ -46,12 +46,18 @@ router.get("/create", (req, res) => {
   res.render("create");
 });
 
-router.get("/id", (req, res) => {
-  res.render("ticket");
+router.get("/:id", (req, res) => {
+	fs.readFile(ticketsDb, (err, data) => {
+		if (err) throw err;
+
+		const ticket = JSON.parse(data).find((t) => t.id == req.params.id);
+
+		res.render("ticket", { ticket: ticket });
+	});
 });
 
 const id = () => {
-	return Math.random().toString(36).substr(2, 9);
+	return "t_" + Math.random().toString(36).substr(2, 9);
 }
 
 module.exports = router;
