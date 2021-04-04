@@ -9,4 +9,12 @@ router.get("/", (req, res) => {
   res.render("tickets");
 });
 
+router.get("/create", (req, res) => {
+  res.render("create");
+});
+
+router.get("/id", (req, res) => {
+  res.render("ticket");
+});
+
 module.exports = router;

@@ -1,0 +1,9 @@
+extends layout.pug
+
+block main
+  section
+    h2(class=`closed`) Ticket Title
+    .ticket-text(class=`closed`) Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ratione velit repudiandae, veniam soluta enim alias numquam optio qui, repellat unde illum adipisci, nesciunt atque fugiat nostrum quasi quam? Sequi!
+    .buttons
+      a.btn(href="/tickets/id/resolve") Mark Resolved
+      a.btn.delete(href="/tickets/id/delete") Delete
