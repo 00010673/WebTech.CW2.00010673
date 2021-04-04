@@ -1,0 +1,11 @@
+extends layout.pug
+
+block main
+  section
+    h2 Tickets with Reported Bugs
+    .tickets 
+      a(href=`/tickets/id` class=`ticket open`) Very bad interface
+      a(href=`/tickets/id` class=`ticket closed`) Page is not responsive
+    .instruction
+      span.open Open
+      span.closed Closed
