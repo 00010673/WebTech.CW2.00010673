@@ -94,7 +94,9 @@ section {
   padding: 3rem 0;
 }
 
-
+section.not {
+  text-align: center;
+}
 
 .tickets {
   display: flex;

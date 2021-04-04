@@ -1,11 +1,16 @@
 extends layout.pug
 
 block main
-  section
-    h2 Tickets with Reported Bugs
-    .tickets 
-      a(href=`/tickets/id` class=`ticket open`) Very bad interface
-      a(href=`/tickets/id` class=`ticket closed`) Page is not responsive
-    .instruction
-      span.open Open
-      span.closed Closed
+    if tickets.length
+      section
+        h2 Tickets with Reported Bugs
+        each ticket in tickets
+          .tickets 
+            a(href=`/tickets/${ticket.id}` class=`ticket ${ticket.status}`)=ticket.name
+        .instruction
+          span.open Open
+          span.closed Closed
+    else
+      section.not
+        h2 No tickets yet!
+        a.btn(href="/tickets/create") Create Ticket

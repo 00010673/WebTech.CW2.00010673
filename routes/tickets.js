@@ -18,7 +18,8 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
 	const ticket = {
 		name: req.body.name,
-		text: req.body.text,
+    text: req.body.text,
+    status: "open",
 		id: id()
 	};
 
