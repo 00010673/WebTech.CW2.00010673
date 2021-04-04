@@ -56,6 +56,22 @@ router.get("/:id", (req, res) => {
 	});
 });
 
+router.get("/:id/delete", (req, res) => {
+	fs.readFile(ticketsDb, (err, data) => {
+		if (err) throw err;
+
+		const tickets = JSON.parse(data);
+
+		tickets.splice(tickets.findIndex((t) => t.id == req.body.id), 1);
+
+		fs.writeFile(ticketsDb, JSON.stringify(tickets), (err) => {
+			if (err) throw err;
+
+			res.render("tickets", { tickets: tickets});
+		});
+	});
+});
+
 const id = () => {
 	return "t_" + Math.random().toString(36).substr(2, 9);
 }
