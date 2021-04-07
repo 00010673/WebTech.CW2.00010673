@@ -29,7 +29,7 @@ This application involves the packages listed below:
 
 ## GitHub Repository Link:
 
-https://github.com/00010673/WebTech.CW2.00010673/settings
+https://github.com/00010673/WebTech.CW2.00010673
 
 
 ## Glitch Web Page Link:
